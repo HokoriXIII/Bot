@@ -2,3 +2,7 @@
 🔪Напасть
 Спустя какое-то время ты пришел в себя
 💊Speed-ы
+
+
+def parse_text(text, username, message_id):
+  if username == bot_username2:
