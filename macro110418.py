@@ -117,11 +117,10 @@ def parse_text(text, username, message_id):
                 time.sleep(random.randint(5, 10))
                 send_msg('@', bot_username, '/use_108')
                 time.sleep(random.randint(5, 10))
-                send_msg('@', bot_username, '/use_114')
+                send_msg('@', bot_username, '/use_109')
                 time.sleep(random.randint(5, 10))
                 send_msg('@', bot_username, '/use_114')
                     #/
-       
         # счетчик хилок
             if text.find('+60') != -1:
                 medpack = medpack - 1
@@ -165,15 +164,17 @@ def parse_text(text, username, message_id):
                     #/
                     # хил по сообщению о голоде
             elif text.find('Ты очень голоден') != -1:
-                time.sleep(2)
+                time.sleep(random.randint(5, 10))
                 send_msg('@', bot_username, '/myfood')
-                time.sleep(3)
+                time.sleep(random.randint(5, 10))
                 send_msg('@', bot_username, '/use_101')
-                time.sleep(2)
-                send_msg('@', bot_username, '/use_107')
-                time.sleep(3)
-                send_msg('@', bot_username, '/use_114')
-                time.sleep(1)
+                time.sleep(random.randint(5, 10))
+                send_msg('@', bot_username, '/use_103')
+                time.sleep(random.randint(5, 10))
+                send_msg('@', bot_username, '/use_108')
+                time.sleep(random.randint(5, 10))
+                send_msg('@', bot_username, '/use_109')
+                time.sleep(random.randint(5, 10))
                 send_msg('@', bot_username, '/use_114')
                     #/
                     # Отаке
@@ -181,8 +182,11 @@ def parse_text(text, username, message_id):
                 time.sleep(random.randint(5, 10))
                 send_msg('@', bot_username, '⚔️Дать отпор')
                     #/
+            elif text.find('элементом неожиданности и Напасть') != -1:
+                time.sleep(random.randint(1, 2))
+                send_msg('@', bot_username, '🔪Напасть')
                     # Точка поворота в лагерь + хил в лагере + уход в Нью-Рино
-            elif text.find('46км от лагеря') != -1 or text.find('Расстояние: 46') != -1:
+            elif text.find('50км от лагеря') != -1 or text.find('51км от лагеря') != -1 or text.find('52км от лагеря') != -1 or text.find('53км от лагеря') != -1:
                 time.sleep(random.randint(5, 10))
                 send_msg('@', bot_username, '⛺️Вернуться')
                 time.sleep(random.randint(5, 10))
@@ -195,7 +199,7 @@ def parse_text(text, username, message_id):
                 send_msg('@', bot_username, '🏘В Нью-Рино')
                     #/
                     # Точки с которых начинаются попытки хила
-            elif text.find('42км от лагеря') != -1 or text.find('Расстояние: 42') != -1:
+            elif text.find('46км от лагеря') != -1 or text.find('Расстояние: 46') != -1:
                 time.sleep(random.randint(5, 10))
                 if text.find('нанес тебе удар') != -1:
                     if medpack > 0:
@@ -210,7 +214,7 @@ def parse_text(text, username, message_id):
                         send_msg('@', bot_username, '/medx1')
                         time.sleep(random.randint(5, 10))
                 send_msg('@', bot_username, '👣Идти дальше')
-            elif text.find('43км от лагеря') != -1 or text.find('Расстояние: 43') != -1:
+            elif text.find('47км от лагеря') != -1 or text.find('Расстояние: 47') != -1:
                 time.sleep(random.randint(5, 10))
                 if text.find('нанес тебе удар') != -1:
                     if medpack > 0:
@@ -225,7 +229,7 @@ def parse_text(text, username, message_id):
                         send_msg('@', bot_username, '/medx1')
                         time.sleep(random.randint(5, 10))
                 send_msg('@', bot_username, '👣Идти дальше')
-            elif text.find('44км от лагеря') != -1 or text.find('Расстояние: 44') != -1:
+            elif text.find('48км от лагеря') != -1 or text.find('Расстояние: 48') != -1:
                 time.sleep(random.randint(5, 10))
                 send_msg('@', bot_username, '/medpack')
                 time.sleep(random.randint(5, 10))
@@ -248,7 +252,7 @@ def parse_text(text, username, message_id):
                         send_msg('@', bot_username, '/buffout')
                         time.sleep(random.randint(5, 10))
                 send_msg('@', bot_username, '👣Идти дальше')
-            elif text.find('45км от лагеря') != -1 or text.find('Расстояние: 45') != -1:
+            elif text.find('49км от лагеря') != -1 or text.find('Расстояние: 49') != -1:
                 time.sleep(random.randint(5, 10))
                 if text.find('нанес тебе удар') != -1:
                     if medpack > 0:
@@ -275,12 +279,9 @@ def parse_text(text, username, message_id):
             elif text.find('км от лагеря') != -1 or text.find('Расстояние:') != -1:
                 time.sleep(random.randint(4, 10))
                 send_msg('@', bot_username, '👣Идти дальше')
-            elif text.find('закончилась выносливость') != -1:           
-                if text.find('46км от лагеря') != -1 or text.find('Расстояние: 46') != -1:
-                time.sleep(random.randint(300, 350))
-                send_msg('@', bot_username, '⛺️Вернуться')
-                send_msg('@', bot_username, '👣Идти дальше')
-                elif time.sleep(random.randint(300, 350))
+            elif text.find('закончилась выносливость') != -1:  
+                 time.sleep(random.randint(300, 350))
+                 send_msg('@', bot_username, '👣Идти дальше')
                         #/
 
         if on == 2:
@@ -295,21 +296,23 @@ def parse_text(text, username, message_id):
                 time.sleep(random.randint(5, 10))
                 send_msg('@', bot_username, '/use_108')
                 time.sleep(random.randint(5, 10))
-                send_msg('@', bot_username, '/use_114')
+                send_msg('@', bot_username, '/use_109')
                 time.sleep(random.randint(5, 10))
                 send_msg('@', bot_username, '/use_114')
                     #/
                     # хил по сообщению о голоде
             elif text.find('Ты очень голоден') != -1:
-                time.sleep(2)
+                time.sleep(random.randint(5, 10))
                 send_msg('@', bot_username, '/myfood')
-                time.sleep(3)
+                time.sleep(random.randint(5, 10))
                 send_msg('@', bot_username, '/use_101')
-                time.sleep(2)
-                send_msg('@', bot_username, '/use_107')
-                time.sleep(3)
-                send_msg('@', bot_username, '/use_114')
-                time.sleep(1)
+                time.sleep(random.randint(5, 10))
+                send_msg('@', bot_username, '/use_103')
+                time.sleep(random.randint(5, 10))
+                send_msg('@', bot_username, '/use_108')
+                time.sleep(random.randint(5, 10))
+                send_msg('@', bot_username, '/use_109')
+                time.sleep(random.randint(5, 10))
                 send_msg('@', bot_username, '/use_114')
                     #/
                     # Отаке
@@ -340,21 +343,23 @@ def parse_text(text, username, message_id):
                 time.sleep(random.randint(5, 10))
                 send_msg('@', bot_username, '/use_108')
                 time.sleep(random.randint(5, 10))
-                send_msg('@', bot_username, '/use_114')
+                send_msg('@', bot_username, '/use_109')
                 time.sleep(random.randint(5, 10))
                 send_msg('@', bot_username, '/use_114')
                     #/
                     # хил по сообщению о голоде
             elif text.find('Ты очень голоден') != -1:
-                time.sleep(2)
+                time.sleep(random.randint(5, 10))
                 send_msg('@', bot_username, '/myfood')
-                time.sleep(3)
+                time.sleep(random.randint(5, 10))
                 send_msg('@', bot_username, '/use_101')
-                time.sleep(2)
-                send_msg('@', bot_username, '/use_107')
-                time.sleep(3)
-                send_msg('@', bot_username, '/use_114')
-                time.sleep(1)
+                time.sleep(random.randint(5, 10))
+                send_msg('@', bot_username, '/use_103')
+                time.sleep(random.randint(5, 10))
+                send_msg('@', bot_username, '/use_108')
+                time.sleep(random.randint(5, 10))
+                send_msg('@', bot_username, '/use_109')
+                time.sleep(random.randint(5, 10))
                 send_msg('@', bot_username, '/use_114')
                     #/
                     # Отаке
@@ -384,21 +389,23 @@ def parse_text(text, username, message_id):
                 time.sleep(random.randint(5, 10))
                 send_msg('@', bot_username, '/use_108')
                 time.sleep(random.randint(5, 10))
-                send_msg('@', bot_username, '/use_114')
+                send_msg('@', bot_username, '/use_109')
                 time.sleep(random.randint(5, 10))
                 send_msg('@', bot_username, '/use_114')
                     #/
                     # хил по сообщению о голоде
             elif text.find('Ты очень голоден') != -1:
-                time.sleep(2)
+                time.sleep(random.randint(5, 10))
                 send_msg('@', bot_username, '/myfood')
-                time.sleep(3)
+                time.sleep(random.randint(5, 10))
                 send_msg('@', bot_username, '/use_101')
-                time.sleep(2)
-                send_msg('@', bot_username, '/use_107')
-                time.sleep(3)
-                send_msg('@', bot_username, '/use_114')
-                time.sleep(1)
+                time.sleep(random.randint(5, 10))
+                send_msg('@', bot_username, '/use_103')
+                time.sleep(random.randint(5, 10))
+                send_msg('@', bot_username, '/use_108')
+                time.sleep(random.randint(5, 10))
+                send_msg('@', bot_username, '/use_109')
+                time.sleep(random.randint(5, 10))
                 send_msg('@', bot_username, '/use_114')
                     #/
                     # Отаке
@@ -428,21 +435,23 @@ def parse_text(text, username, message_id):
                 time.sleep(random.randint(5, 10))
                 send_msg('@', bot_username, '/use_108')
                 time.sleep(random.randint(5, 10))
-                send_msg('@', bot_username, '/use_114')
+                send_msg('@', bot_username, '/use_109')
                 time.sleep(random.randint(5, 10))
                 send_msg('@', bot_username, '/use_114')
                     #/
                     # хил по сообщению о голоде
             elif text.find('Ты очень голоден') != -1:
-                time.sleep(2)
+                time.sleep(random.randint(5, 10))
                 send_msg('@', bot_username, '/myfood')
-                time.sleep(3)
+                time.sleep(random.randint(5, 10))
                 send_msg('@', bot_username, '/use_101')
-                time.sleep(2)
-                send_msg('@', bot_username, '/use_107')
-                time.sleep(3)
-                send_msg('@', bot_username, '/use_114')
-                time.sleep(1)
+                time.sleep(random.randint(5, 10))
+                send_msg('@', bot_username, '/use_103')
+                time.sleep(random.randint(5, 10))
+                send_msg('@', bot_username, '/use_108')
+                time.sleep(random.randint(5, 10))
+                send_msg('@', bot_username, '/use_109')
+                time.sleep(random.randint(5, 10))
                 send_msg('@', bot_username, '/use_114')
                     #/
                     # Отаке
@@ -472,21 +481,23 @@ def parse_text(text, username, message_id):
                 time.sleep(random.randint(5, 10))
                 send_msg('@', bot_username, '/use_108')
                 time.sleep(random.randint(5, 10))
-                send_msg('@', bot_username, '/use_114')
+                send_msg('@', bot_username, '/use_109')
                 time.sleep(random.randint(5, 10))
                 send_msg('@', bot_username, '/use_114')
                     #/
                     # хил по сообщению о голоде
             elif text.find('Ты очень голоден') != -1:
-                time.sleep(2)
+                time.sleep(random.randint(5, 10))
                 send_msg('@', bot_username, '/myfood')
-                time.sleep(3)
+                time.sleep(random.randint(5, 10))
                 send_msg('@', bot_username, '/use_101')
-                time.sleep(2)
-                send_msg('@', bot_username, '/use_107')
-                time.sleep(3)
-                send_msg('@', bot_username, '/use_114')
-                time.sleep(1)
+                time.sleep(random.randint(5, 10))
+                send_msg('@', bot_username, '/use_103')
+                time.sleep(random.randint(5, 10))
+                send_msg('@', bot_username, '/use_108')
+                time.sleep(random.randint(5, 10))
+                send_msg('@', bot_username, '/use_109')
+                time.sleep(random.randint(5, 10))
                 send_msg('@', bot_username, '/use_114')
                     #/
                     # Отаке
@@ -516,21 +527,23 @@ def parse_text(text, username, message_id):
                 time.sleep(random.randint(5, 10))
                 send_msg('@', bot_username, '/use_108')
                 time.sleep(random.randint(5, 10))
-                send_msg('@', bot_username, '/use_114')
+                send_msg('@', bot_username, '/use_109')
                 time.sleep(random.randint(5, 10))
                 send_msg('@', bot_username, '/use_114')
                     #/
                     # хил по сообщению о голоде
             elif text.find('Ты очень голоден') != -1:
-                time.sleep(2)
+                time.sleep(random.randint(5, 10))
                 send_msg('@', bot_username, '/myfood')
-                time.sleep(3)
+                time.sleep(random.randint(5, 10))
                 send_msg('@', bot_username, '/use_101')
-                time.sleep(2)
-                send_msg('@', bot_username, '/use_107')
-                time.sleep(3)
-                send_msg('@', bot_username, '/use_114')
-                time.sleep(1)
+                time.sleep(random.randint(5, 10))
+                send_msg('@', bot_username, '/use_103')
+                time.sleep(random.randint(5, 10))
+                send_msg('@', bot_username, '/use_108')
+                time.sleep(random.randint(5, 10))
+                send_msg('@', bot_username, '/use_109')
+                time.sleep(random.randint(5, 10))
                 send_msg('@', bot_username, '/use_114')
                     #/
                     # Отаке
@@ -560,21 +573,23 @@ def parse_text(text, username, message_id):
                 time.sleep(random.randint(5, 10))
                 send_msg('@', bot_username, '/use_108')
                 time.sleep(random.randint(5, 10))
-                send_msg('@', bot_username, '/use_114')
+                send_msg('@', bot_username, '/use_109')
                 time.sleep(random.randint(5, 10))
                 send_msg('@', bot_username, '/use_114')
                     #/
                     # хил по сообщению о голоде
             elif text.find('Ты очень голоден') != -1:
-                time.sleep(2)
+                time.sleep(random.randint(5, 10))
                 send_msg('@', bot_username, '/myfood')
-                time.sleep(3)
+                time.sleep(random.randint(5, 10))
                 send_msg('@', bot_username, '/use_101')
-                time.sleep(2)
-                send_msg('@', bot_username, '/use_107')
-                time.sleep(3)
-                send_msg('@', bot_username, '/use_114')
-                time.sleep(1)
+                time.sleep(random.randint(5, 10))
+                send_msg('@', bot_username, '/use_103')
+                time.sleep(random.randint(5, 10))
+                send_msg('@', bot_username, '/use_108')
+                time.sleep(random.randint(5, 10))
+                send_msg('@', bot_username, '/use_109')
+                time.sleep(random.randint(5, 10))
                 send_msg('@', bot_username, '/use_114')
                     #/
                     # Отаке
@@ -603,21 +618,23 @@ def parse_text(text, username, message_id):
                 time.sleep(random.randint(5, 10))
                 send_msg('@', bot_username, '/use_108')
                 time.sleep(random.randint(5, 10))
-                send_msg('@', bot_username, '/use_114')
+                send_msg('@', bot_username, '/use_109')
                 time.sleep(random.randint(5, 10))
                 send_msg('@', bot_username, '/use_114')
                     #/
                     # хил по сообщению о голоде
             elif text.find('Ты очень голоден') != -1:
-                time.sleep(2)
+                time.sleep(random.randint(5, 10))
                 send_msg('@', bot_username, '/myfood')
-                time.sleep(3)
+                time.sleep(random.randint(5, 10))
                 send_msg('@', bot_username, '/use_101')
-                time.sleep(2)
-                send_msg('@', bot_username, '/use_107')
-                time.sleep(3)
-                send_msg('@', bot_username, '/use_114')
-                time.sleep(1)
+                time.sleep(random.randint(5, 10))
+                send_msg('@', bot_username, '/use_103')
+                time.sleep(random.randint(5, 10))
+                send_msg('@', bot_username, '/use_108')
+                time.sleep(random.randint(5, 10))
+                send_msg('@', bot_username, '/use_109')
+                time.sleep(random.randint(5, 10))
                 send_msg('@', bot_username, '/use_114')
                     #/
                     # Отаке
