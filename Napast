@@ -14,3 +14,28 @@ result = re.search(regex, text)
 if result:
 print(type(result))
 print(len(result))
+
+
+ regex = r"(\d+)\/(\d{3})"
+            result = re.findall(regex, text)
+            if result:
+                 hp_current = result[0][0]
+                 hp_max = result[0][1]
+             if hp_max > hp_current:
+                  if medpack > 0:
+                    send_msg('@', bot_username, '/medpack')
+                    time.sleep(random.randint(5, 10))
+                  elif medx1 > 0:
+                        send_msg('@', bot_username, '/medx1')
+                        time.sleep(random.randint(5, 10))
+                        if medx1 > 0:
+                            send_msg('@', bot_username, '/medx1')
+                            time.sleep(random.randint(5, 10))
+                  elif buffout > 0:
+                        send_msg('@', bot_username, '/buffout')
+                        time.sleep(random.randint(5, 10))
+                        send_msg('@', bot_username, '/buffout')
+  File "macro110418.py", line 126
+    if hp_max > hp_current:
+                          ^
+IndentationError: unindent does not match any outer indentation level
