@@ -6,3 +6,9 @@
 
 def parse_text(text, username, message_id):
   if username == bot_username2:
+
+
+regex = r"(\d+)\/(\d{3})"
+result = re.search(regex, text)
+
+if result:
