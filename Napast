@@ -12,3 +12,5 @@ regex = r"(\d+)\/(\d{3})"
 result = re.search(regex, text)
 
 if result:
+print(type(result))
+print(len(result))
